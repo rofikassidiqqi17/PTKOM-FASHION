@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FITCAMP - Home</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            FIT<span>CAMP</span>
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="account.html">
+                Account
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                CAMPUS OUTFIT ASSISTANT
+            </p>
+
+            <h1>
+                Find Your
+                <span>Campus Style</span>
+            </h1>
+
+            <p>
+                Pilih outfit yang kamu pakai,
+                tentukan warnanya, lalu biarkan
+                FITCAMP membantu menganalisis
+                kombinasi outfit kamu.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OUTFIT ANALYZER
+    ========================== -->
+
+    <main class="analyzer">
+
+        <div class="section-title">
+
+            <p class="small-title">
+                OUTFIT ANALYZER
+            </p>
+
+            <h2>
+                Build Your Outfit
+            </h2>
+
+            <span>
+                Pilih satu item untuk setiap kategori.
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             SHIRT
+        ========================== -->
+
+        <section class="item-section">
+
+            <div class="item-heading">
+
+                <div>
+                    <span class="item-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Pilih Baju
+                    </h3>
+                </div>
+
+                <input
+                    type="color"
+                    id="shirtColor"
+                    value="#FFFFFF"
+                    title="Pilih warna baju"
+                >
+
+            </div>
+
+            <div
+                id="shirtContainer"
+                class="product-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             PANTS
+        ========================== -->
+
+        <section class="item-section">
+
+            <div class="item-heading">
+
+                <div>
+                    <span class="item-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Pilih Celana
+                    </h3>
+                </div>
+
+                <input
+                    type="color"
+                    id="pantsColor"
+                    value="#4169E1"
+                    title="Pilih warna celana"
+                >
+
+            </div>
+
+            <div
+                id="pantsContainer"
+                class="product-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             SHOES
+        ========================== -->
+
+        <section class="item-section">
+
+            <div class="item-heading">
+
+                <div>
+                    <span class="item-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Pilih Sepatu
+                    </h3>
+                </div>
+
+                <input
+                    type="color"
+                    id="shoesColor"
+                    value="#FFFFFF"
+                    title="Pilih warna sepatu"
+                >
+
+            </div>
+
+            <div
+                id="shoesContainer"
+                class="product-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             ANALYZE BUTTON
+        ========================== -->
+
+        <div class="analyze-area">
+
+            <button
+                id="analyzeBtn"
+                class="analyze-btn"
+            >
+                Analyze My Outfit
+            </button>
+
+            <p id="analyzeMessage"></p>
+
+        </div>
+
+
+        <!-- =========================
+             RESULT
+        ========================== -->
+
+        <section
+            id="resultSection"
+            class="result-section"
+        >
+
+            <div class="result-heading">
+
+                <p class="small-title">
+                    YOUR RESULT
+                </p>
+
+                <h2>
+                    Outfit Analysis
+                </h2>
+
+                <p id="resultDescription"></p>
+
+            </div>
+
+
+            <!-- MAIN RESULT -->
+
+            <div class="main-result">
+
+                <div class="style-result">
+
+                    <span>
+                        Dominant Style
+                    </span>
+
+                    <h2 id="mainStyle">
+                        -
+                    </h2>
+
+                </div>
+
+                <div class="overall-result">
+
+                    <span>
+                        Overall Score
+                    </span>
+
+                    <strong id="overallScore">
+                        0
+                    </strong>
+
+                    <small>
+                        / 100
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- SELECTED OUTFIT -->
+
+            <div class="selected-outfit">
+
+                <h3>
+                    Your Outfit
+                </h3>
+
+                <div class="selected-items">
+
+                    <div class="selected-item">
+
+                        <img
+                            id="resultShirt"
+                            src=""
+                            alt="Baju"
+                        >
+
+                        <h4 id="resultShirtName">
+                            -
+                        </h4>
+
+                        <div
+                            id="resultShirtColorBox"
+                            class="color-box"
+                        ></div>
+
+                        <span id="resultShirtColor">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="selected-item">
+
+                        <img
+                            id="resultPants"
+                            src=""
+                            alt="Celana"
+                        >
+
+                        <h4 id="resultPantsName">
+                            -
+                        </h4>
+
+                        <div
+                            id="resultPantsColorBox"
+                            class="color-box"
+                        ></div>
+
+                        <span id="resultPantsColor">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="selected-item">
+
+                        <img
+                            id="resultShoes"
+                            src=""
+                            alt="Sepatu"
+                        >
+
+                        <h4 id="resultShoesName">
+                            -
+                        </h4>
+
+                        <div
+                            id="resultShoesColorBox"
+                            class="color-box"
+                        ></div>
+
+                        <span id="resultShoesColor">
+                            -
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STYLE SCORES -->
+
+            <!-- PEMBUNGKUS BARU: analysis-wrapper -->
+<div class="analysis-wrapper">
+
+    <!-- STYLE ANALYSIS -->
+    <div class="style-analysis">
+        <h3>Style Analysis</h3>
+
+        <div class="score-row">
+            <span>Casual</span>
+            <div class="score-bar">
+                <div id="casualBar" class="score-fill"></div>
+            </div>
+            <strong id="casualScore">0</strong>
+        </div>
+
+        <div class="score-row">
+            <span>Modern</span>
+            <div class="score-bar">
+                <div id="modernBar" class="score-fill"></div>
+            </div>
+            <strong id="modernScore">0</strong>
+        </div>
+
+        <div class="score-row">
+            <span>Streetwear</span>
+            <div class="score-bar">
+                <div id="streetwearBar" class="score-fill"></div>
+            </div>
+            <strong id="streetwearScore">0</strong>
+        </div>
+
+        <div class="score-row">
+            <span>Formal</span>
+            <div class="score-bar">
+                <div id="formalBar" class="score-fill"></div>
+            </div>
+            <strong id="formalScore">0</strong>
+        </div>
+
+        <div class="score-row">
+            <span>Elegant</span>
+            <div class="score-bar">
+                <div id="elegantBar" class="score-fill"></div>
+            </div>
+            <strong id="elegantScore">0</strong>
+        </div>
+    </div>
+
+    <!-- COMPATIBILITY -->
+    <div class="compatibility">
+        <h3>Outfit Compatibility</h3>
+
+        <div class="compatibility-grid">
+            <div class="compatibility-card">
+                <span>Style Compatibility</span>
+                <strong id="styleCompatibility">0%</strong>
+            </div>
+
+            <div class="compatibility-card">
+                <span>Color Compatibility</span>
+                <strong id="colorScore">0%</strong>
+            </div>
+
+            <div class="compatibility-card">
+                <span>Overall</span>
+                <strong id="overallScore2">0%</strong>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+            <!-- RECOMMENDATION -->
+
+            <div class="recommendation">
+
+                <h3>
+                    Recommendation
+                </h3>
+
+                <p id="recommendationText">
+                    -
+                </p>
+
+            </div>
+
+
+            <!-- SAVE -->
+
+            <div class="save-outfit-area">
+
+                <button
+                    id="saveOutfitBtn"
+                    class="save-outfit-btn"
+                >
+                    ♡ Simpan Outfit
+                </button>
+
+                <p id="saveMessage"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            FITCAMP
+        </div>
+
+        <p>
+            Your Campus Outfit Assistant
+        </p>
+
+        <span>
+            © 2026 FITCAMP
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

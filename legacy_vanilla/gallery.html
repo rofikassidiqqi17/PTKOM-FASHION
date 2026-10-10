@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FITCAMP - Gallery</title>
+
+    <link rel="stylesheet" href="gallery.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            FIT<span>CAMP</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="account.html">Account</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="gallery-hero">
+
+        <p>FITCAMP INSPIRATION</p>
+
+        <h1>
+            Find Your
+            <span>Campus Look</span>
+        </h1>
+
+        <p class="hero-description">
+            Cari inspirasi outfit kampus sesuai
+            dengan style yang kamu suka.
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari outfit, style, warna..."
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- FILTER -->
+
+    <section class="gallery-container">
+
+        <div class="filter-area">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="casual">
+                Casual
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="formal">
+                Formal
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="streetwear">
+                Streetwear
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="elegant">
+                Elegant
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="hijab">
+                Hijab
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY -->
+
+        <div
+            id="galleryGrid"
+            class="gallery-grid">
+        </div>
+
+
+        <!-- NO RESULT -->
+
+        <div
+            id="noResult"
+            class="no-result hidden">
+
+            <h3>Outfit tidak ditemukan</h3>
+
+            <p>
+                Coba cari dengan kata kunci lain.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+
+    <div
+        id="outfitModal"
+        class="modal">
+
+        <div class="modal-content">
+
+            <button
+                id="closeModal"
+                class="close-modal">
+                ×
+            </button>
+
+            <div class="modal-image">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="Outfit">
+
+            </div>
+
+            <div class="modal-info">
+
+                <span
+                    id="modalCategory"
+                    class="modal-category">
+                </span>
+
+                <h2 id="modalTitle">
+                </h2>
+
+                <p id="modalDescription">
+                </p>
+
+                <div class="modal-tags">
+
+                    <span id="modalTag1"></span>
+                    <span id="modalTag2"></span>
+                    <span id="modalTag3"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            FITCAMP
+        </div>
+
+        <p>
+            Your Campus Outfit Assistant
+        </p>
+
+        <span>
+            © 2026 FITCAMP
+        </span>
+
+    </footer>
+
+
+    <script src="gallery.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FITCAMP - Account</title>
+
+    <link
+        rel="stylesheet"
+        href="account.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        FIT<span>CAMP</span>
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a
+            href="account.html"
+            class="active"
+        >
+            Account
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     ACCOUNT
+========================= -->
+
+<main class="account-page">
+
+
+    <!-- =========================
+         AUTH SECTION
+    ========================== -->
+
+    <section
+        id="authSection"
+        class="auth-section"
+    >
+
+        <div class="auth-card">
+
+
+            <!-- LOGIN -->
+
+            <div
+                id="loginForm"
+                class="auth-form"
+            >
+
+                <div class="auth-title">
+
+                    <p>
+                        WELCOME TO FITCAMP
+                    </p>
+
+                    <h1>
+                        Welcome Back
+                    </h1>
+
+                    <span>
+                        Login untuk melihat outfit
+                        dan profile kamu.
+                    </span>
+
+                </div>
+
+
+                <form id="login">
+
+                    <div class="input-group">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Masukkan email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Masukkan password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <p
+                        id="loginMessage"
+                        class="form-message"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="auth-btn"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+
+                <div class="switch-auth">
+
+                    Belum punya akun?
+
+                    <button
+                        type="button"
+                        id="showRegister"
+                    >
+                        Sign Up
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REGISTER -->
+
+            <div
+                id="registerForm"
+                class="auth-form hidden"
+            >
+
+                <div class="auth-title">
+
+                    <p>
+                        JOIN FITCAMP
+                    </p>
+
+                    <h1>
+                        Create Account
+                    </h1>
+
+                    <span>
+                        Buat akun untuk menyimpan
+                        outfit favoritmu.
+                    </span>
+
+                </div>
+
+
+                <form id="register">
+
+                    <div class="input-group">
+
+                        <label for="registerName">
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Nama kamu"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="registerEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Email kamu"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Buat password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <p
+                        id="registerMessage"
+                        class="form-message"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="auth-btn"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <div class="switch-auth">
+
+                    Sudah punya akun?
+
+                    <button
+                        type="button"
+                        id="showLogin"
+                    >
+                        Sign In
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROFILE SECTION
+    ========================== -->
+
+    <section
+        id="profileSection"
+        class="profile-section hidden"
+    >
+
+
+        <!-- PROFILE HEADER -->
+
+        <div class="profile-header">
+
+            <div>
+
+                <p class="small-title">
+                    MY ACCOUNT
+                </p>
+
+                <h1>
+                    Profile
+                </h1>
+
+                <span>
+                    Kelola informasi akun
+                    FITCAMP kamu.
+                </span>
+
+            </div>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+
+
+        <!-- PROFILE CARD -->
+
+        <div class="profile-card">
+
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="profile-picture-area">
+
+                <div class="profile-picture">
+
+                    <img
+                        id="profileImage"
+                        src=""
+                        alt="Profile"
+                    >
+
+                </div>
+
+
+                <label
+                    for="profileUpload"
+                    class="upload-btn"
+                >
+                    Upload Photo
+                </label>
+
+
+                <input
+                    type="file"
+                    id="profileUpload"
+                    accept="image/*"
+                    hidden
+                >
+
+            </div>
+
+
+
+            <!-- PROFILE INFORMATION -->
+
+            <div class="profile-information">
+
+                <div class="profile-field">
+
+                    <span>
+                        Nama
+                    </span>
+
+                    <strong id="profileName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-field">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="profileEmail">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="editProfileBtn"
+                    class="edit-btn"
+                >
+                    Edit Profile
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             EDIT PROFILE
+        ========================== -->
+
+        <div
+            id="editProfileCard"
+            class="edit-profile-card hidden"
+        >
+
+            <h2>
+                Edit Profile
+            </h2>
+
+
+            <div class="input-group">
+
+                <label for="editName">
+                    Nama
+                </label>
+
+                <input
+                    type="text"
+                    id="editName"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="editEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="editEmail"
+                >
+
+            </div>
+
+
+            <p
+                id="editMessage"
+                class="form-message"
+            ></p>
+
+
+            <div class="edit-buttons">
+
+                <button
+                    type="button"
+                    id="cancelEdit"
+                    class="cancel-btn"
+                >
+                    Batal
+                </button>
+
+                <button
+                    type="button"
+                    id="saveProfile"
+                    class="auth-btn"
+                >
+                    Simpan Perubahan
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             OUTFIT HISTORY
+        ========================== -->
+
+        <div class="history-section">
+
+            <div class="history-title">
+
+                <p class="small-title">
+                    MY OUTFITS
+                </p>
+
+                <h2>
+                    Outfit History
+                </h2>
+
+                <span>
+                    Outfit yang kamu simpan
+                    dari halaman Home.
+                </span>
+
+            </div>
+
+
+            <div
+                id="outfitHistory"
+                class="history-grid"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        FITCAMP
+    </div>
+
+    <p>
+        Your Campus Outfit Assistant
+    </p>
+
+    <span>
+        © 2026 FITCAMP
+    </span>
+
+</footer>
+
+
+<script src="account.js"></script>
+
+</body>
+
+</html>
